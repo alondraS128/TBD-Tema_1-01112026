@@ -1,0 +1,28 @@
+info:
+  name: Crear persona
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/personas
+  body:
+    type: json
+    data: |2-
+            {
+           "nombre": "Alejandra",
+           "apellidoPaterno": "Morales",
+           "apellidoMaterno": "Hernandez",
+           "direccion": "Calle 4",
+           "telefono": "932457891",
+           "email": "alejandra@correo.com"
+            
+         }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,27 @@
+info:
+  name: Actualizar persona
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://localhost:8080/api/personas/2
+  body:
+    type: json
+    data: |2-
+            {
+           "nombre": "Amanda",
+           "apellidoPaterno": "Consuegra",
+           "apellidoMaterno": "Pérez",
+           "direccion": "Calle 8",
+           "telefono": "9921006428",
+           "email": "amanda@correo.com"
+         }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
